@@ -6,193 +6,7 @@
 <meta name="description" content="Nathel Realtors: trusted property advisor and provider in Greater Noida West. Flats, plots, shops, offices and rentals.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F4F6F9;--sf:#fff;--ink:#0B1F33;--mut:#51657A;--ln:#DCE3EA;--gold:#B8892D;--navy:#0B1F33;--deep:#071626;--on:#F4F6F9;--g2:#E8CB86;--sh:0 10px 30px rgba(11,31,51,.08);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08131F;--sf:#0F2236;--ink:#EAF0F6;--mut:#9DB0C3;--ln:#1F364D;--gold:#E2BC6A;--navy:#0A1829;--deep:#050E18;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#08131F;--sf:#0F2236;--ink:#EAF0F6;--mut:#9DB0C3;--ln:#1F364D;--gold:#E2BC6A;--navy:#0A1829;--deep:#050E18;--sh:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Source Sans 3",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.logo,.btn{font-family:Sora,system-ui,sans-serif}
-h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.01em}
-a{color:inherit}
-svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--deep);z-index:30}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(7,22,38,.94);backdrop-filter:blur(10px);color:#F4F6F9;border-bottom:1px solid rgba(232,203,134,.18)}
-.bar{max-width:1160px;margin:auto;padding:12px 22px;display:flex;align-items:center;gap:18px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;text-decoration:none}
-.mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#E8CB86,#B8892D);color:#071626;display:grid;place-items:center;font-size:1.3rem}
-.logo small{display:block;font:600 .62rem "Source Sans 3";letter-spacing:.14em;color:var(--g2);margin-top:2px}
-nav{margin-left:auto;display:flex;gap:2px;align-items:center}
-nav a{text-decoration:none;padding:9px 13px;border-radius:8px;font-weight:600;font-size:.95rem;color:#C9D5E1}
-nav a:hover{color:#fff}nav a.on{color:#E8CB86}
-nav a.cl{margin-left:8px;background:linear-gradient(135deg,#E8CB86,#B8892D);color:#071626;padding:9px 18px}
-.mb{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;width:42px;height:42px;font-size:1.3rem;cursor:pointer}
-@media(max-width:900px){.mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:#071626;padding:10px 16px 18px;border-bottom:1px solid rgba(232,203,134,.2)}nav.open{display:flex}nav a.cl{margin:8px 0 0;text-align:center}}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-.page{display:none}.page.on{display:block;animation:fd .35s ease}@keyframes fd{from{opacity:0}}
-.wrap{max-width:1160px;margin:auto;padding:76px 22px}
-.hero{position:relative;overflow:hidden;color:#F4F6F9;background:radial-gradient(900px 500px at 85% 0,rgba(201,162,75,.28),transparent 60%),linear-gradient(160deg,#0E2A45,#071626 70%)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 22px 150px;position:relative;z-index:2}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding:56px 22px 130px}}
-.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid rgba(232,203,134,.45);border-radius:99px;color:#E8CB86;font-weight:600;font-size:.9rem;margin-bottom:22px}
-.hero h1{font-size:clamp(2.3rem,5.4vw,3.9rem);font-weight:800}
-.hero h1 em{font-style:normal;color:#E8CB86}
-.hero p.s{font-size:1.15rem;color:#C9D5E1;max-width:50ch;margin:22px 0 30px}
-.sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:150px;z-index:1}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:12px;font-weight:700;font-size:.98rem;text-decoration:none;border:2px solid transparent;background:linear-gradient(135deg,#E8CB86,#B8892D);color:#071626;cursor:pointer;box-shadow:0 8px 22px rgba(184,137,45,.3);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.o{background:transparent;color:inherit;border-color:rgba(232,203,134,.6);box-shadow:none}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.glass{background:rgba(255,255,255,.08);border:1px solid rgba(232,203,134,.3);border-radius:20px;padding:28px;backdrop-filter:blur(8px)}
-.glass h3{font-size:1.2rem;margin-bottom:4px}.glass p{margin:0 0 18px;color:#C9D5E1;font-size:.95rem}
-.glass label{display:grid;gap:6px;font-weight:600;font-size:.9rem;margin-bottom:14px;color:#E8CB86}
-.glass select,.glass input{font:inherit;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(7,22,38,.7);color:#fff;width:100%}
-.glass .btn{width:100%;justify-content:center}
-.trust{background:var(--navy);color:#F4F6F9;border-bottom:1px solid rgba(232,203,134,.15)}
-.trust .in{max-width:1160px;margin:auto;padding:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
-.trust div{display:flex;gap:12px;align-items:center;font-weight:600}.trust .i{font-size:1.6rem;color:#E8CB86}
-.eb{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:700;margin-bottom:12px}.eb::before{content:"";width:34px;height:3px;background:var(--gold);border-radius:2px}
-h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:14px}
-.lead{color:var(--mut);max-width:62ch;font-size:1.08rem}
-.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:40px}
-.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:28px;box-shadow:var(--sh);transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);border-color:var(--gold)}
-.card h3{font-size:1.15rem;margin-bottom:8px}.card p{margin:0;color:var(--mut)}
-.ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#0E2A45,#071626);color:#E8CB86;display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}
-.band{background:var(--sf);border-block:1px solid var(--ln)}
-.split{display:grid;gap:48px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center}
-.pgh{position:relative;overflow:hidden;color:#F4F6F9;background:radial-gradient(700px 300px at 90% 0,rgba(201,162,75,.25),transparent 60%),linear-gradient(160deg,#0E2A45,#071626)}
-.pgh .wrap{padding:72px 22px}
-.pgh h1{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:800}.pgh p{color:#C9D5E1;max-width:56ch;margin:14px 0 0;font-size:1.1rem}
-.thumb{height:150px;border-radius:14px;margin:-8px -8px 20px;background:linear-gradient(135deg,#0E2A45,#1B4568);display:grid;place-items:center;color:#E8CB86;font-size:3.4rem;position:relative;overflow:hidden}
-.thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(120px 80px at 80% 10%,rgba(232,203,134,.3),transparent)}
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.tags span{font-size:.82rem;font-weight:600;padding:4px 12px;border-radius:99px;background:var(--bg);border:1px solid var(--ln);color:var(--mut)}
-.steps{list-style:none;padding:0;margin:44px 0 0;display:grid;gap:0;counter-reset:s;position:relative}
-.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:22px;padding-bottom:30px;position:relative}
-.steps li::before{content:counter(s);width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#E8CB86,#B8892D);color:#071626;font:800 1.3rem Sora;display:grid;place-items:center;position:relative;z-index:1}
-.steps li:not(:last-child)::after{content:"";position:absolute;left:27px;top:56px;bottom:0;width:2px;background:var(--ln)}
-.steps h3{font-size:1.2rem;margin:4px 0 6px}.steps p{margin:0;color:var(--mut)}
-details{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:18px 22px;margin-bottom:12px}
-summary{cursor:pointer;font:700 1rem Sora;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1}details[open] summary::after{content:"–"}
-details p{margin:12px 0 0;color:var(--mut)}
-.cta{position:relative;overflow:hidden;text-align:center;color:#F4F6F9;background:radial-gradient(600px 300px at 50% 0,rgba(201,162,75,.3),transparent 65%),linear-gradient(160deg,#0E2A45,#071626)}
-.cta .wrap{padding:76px 22px}.cta p{color:#C9D5E1;margin:0 auto 28px;max-width:52ch}.cta .btns{justify-content:center}
-.info p{margin:0 0 20px;display:flex;gap:14px}.info .i{font-size:1.4rem;color:var(--gold);margin-top:3px}.info b{display:block;font:700 .95rem Sora}
-.info a{color:var(--mut);text-decoration:none}.info a:hover{color:var(--gold)}
-.phone-error{color:#b42318;font-weight:600}
-form,.fm{display:grid;gap:16px}
-label{font-weight:600;font-size:.93rem;display:grid;gap:6px}
-.fm input,.fm select,.fm textarea{font:inherit;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--bg);color:var(--ink);width:100%}
-footer{background:var(--deep);color:#C9D5E1;font-size:.95rem}
-footer .in{max-width:1160px;margin:auto;padding:48px 22px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
-@media(max-width:800px){footer .in{grid-template-columns:1fr}}
-footer h4{font:700 .95rem Sora;color:#fff;margin:0 0 12px}footer a{display:block;text-decoration:none;padding:3px 0}footer a:hover{color:#E8CB86}
-footer .cp{border-top:1px solid rgba(255,255,255,.1);padding:18px 22px;text-align:center;font-size:.88rem;max-width:1160px;margin:auto}
-.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 8px 22px rgba(0,0,0,.35);z-index:25;text-decoration:none}
-
-.hl{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:#C9D5E1;font-weight:600;font-size:.95rem}
-.hl span{display:inline-flex;gap:8px;align-items:center}.hl .i{color:#E8CB86;font-size:1.15rem}
-.hero h1{font-size:clamp(2.4rem,5.8vw,4.3rem)}
-.tiles{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:40px}
-.tile{position:relative;overflow:hidden;border-radius:20px;padding:28px 24px;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;color:#F4F6F9;text-decoration:none;background:linear-gradient(160deg,#16436a,#071626);box-shadow:var(--sh);transition:transform .2s}
-.tile:nth-child(2){background:linear-gradient(160deg,#1c5a63,#071626)}.tile:nth-child(3){background:linear-gradient(160deg,#4a3a1a,#071626)}.tile:nth-child(4){background:linear-gradient(160deg,#2c3a73,#071626)}
-.tile:hover{transform:translateY(-5px)}
-.tile .i{position:absolute;top:20px;right:20px;font-size:4.2rem;color:#E8CB86;opacity:.35}
-.tile h3{font-size:1.25rem;margin-bottom:6px}.tile p{margin:0;color:#C9D5E1;font-size:.95rem}
-.tile b{margin-top:14px;color:#E8CB86;font:700 .9rem Sora}
-.why{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:26px;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--ln)}
-@media(max-width:860px){.why{grid-template-columns:1fr}}
-.why .l{padding:52px 40px;color:#F4F6F9;background:radial-gradient(400px 260px at 100% 0,rgba(201,162,75,.35),transparent 65%),linear-gradient(160deg,#0E2A45,#071626)}
-.why .l q{display:block;font:700 clamp(1.5rem,3vw,2.1rem)/1.25 Sora;quotes:none}
-.why .l p{color:#C9D5E1;margin:18px 0 26px}
-.why .r{padding:44px 40px;background:var(--sf);display:grid;gap:22px;align-content:center}
-.ck{display:flex;gap:16px}.ck .i{font-size:1.5rem;color:var(--gold);margin-top:2px}.ck b{display:block;font:700 1.05rem Sora;margin-bottom:2px}.ck span{color:var(--mut)}
-.hs{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:40px;counter-reset:q}
-.hs div{counter-increment:q;background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:26px;position:relative;box-shadow:var(--sh)}
-.hs div::before{content:counter(q);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#E8CB86,#B8892D);color:#071626;font:800 1.1rem Sora;margin-bottom:14px}
-.hs h3{font-size:1.1rem;margin-bottom:6px}.hs p{margin:0;color:var(--mut)}
-.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.chips span{display:inline-flex;gap:8px;align-items:center;padding:11px 20px;border-radius:99px;background:var(--sf);border:1px solid var(--ln);font-weight:600;box-shadow:var(--sh)}.chips .i{color:var(--gold)}
-.ctc{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:26px;color:#C9D5E1;font-weight:600}
-.ctc span{display:inline-flex;gap:8px;align-items:center}.ctc .i{color:#E8CB86}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-
-/* Brand polish */
-:root{--bg:#f5f4f1;--sf:#fff;--ink:#172a27;--mut:#65746e;--ln:#e5e8e1;--gold:#bd9452;--navy:#132c28;--deep:#10231f;--g2:#e8d2a7;--sh:0 16px 42px rgba(20,40,34,.09)}
-body{font-size:16px;line-height:1.7}
-header{background:rgba(16,35,31,.96);border-bottom-color:rgba(232,210,167,.22)}
-.bar{max-width:1240px;min-height:76px;padding:12px 26px}
-.logo{letter-spacing:-.03em}.mark{border-radius:12px;box-shadow:0 6px 18px rgba(189,148,82,.24)}
-nav{gap:5px}nav a{font-size:.9rem;transition:background .2s,color .2s}
-nav a:hover{background:rgba(255,255,255,.07)}nav a.cl{border-radius:999px;padding:10px 20px}
-.wrap{max-width:1240px;padding:88px 26px}
-.hero{isolation:isolate;background:radial-gradient(ellipse at 82% 24%,rgba(189,148,82,.2),transparent 34%),linear-gradient(120deg,#132c28 0%,#10231f 66%,#172e29 100%)}
-.hero::before{content:"";position:absolute;z-index:-1;inset:0 0 90px auto;width:58%;background:linear-gradient(90deg,#10231f 0%,rgba(16,35,31,.42) 44%,rgba(16,35,31,.06) 100%),linear-gradient(0deg,rgba(16,35,31,.42),transparent 40%),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85") center 48%/cover no-repeat;opacity:.88}
-.hero .wrap{max-width:1240px;grid-template-columns:1.1fr .78fr;gap:8%;padding-top:104px;padding-bottom:166px}
-.hero h1{max-width:680px;letter-spacing:-.055em;font-size:clamp(2.7rem,5.6vw,4.7rem)}
-.hero h1 em{color:#e8d2a7}
-.hero p.s{max-width:48ch;color:#d1dad3;font-size:1.12rem}
-.pill{border-color:rgba(232,210,167,.4);background:rgba(255,255,255,.04);backdrop-filter:blur(8px)}
-.btn{border-radius:999px;padding:14px 23px;background:linear-gradient(135deg,#ead8af,#c49b58);box-shadow:0 10px 24px rgba(189,148,82,.2);transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(189,148,82,.28)}
-.btn.o{border-color:rgba(232,210,167,.55);color:#fff}
-.glass{background:rgba(18,39,35,.76);border:1px solid rgba(255,255,255,.2);border-radius:22px;padding:30px;box-shadow:0 24px 70px rgba(0,0,0,.24);backdrop-filter:blur(18px)}
-.glass select,.glass input{min-height:50px;border-radius:12px;background:rgba(8,22,18,.68)}
-.trust{background:#fff;color:var(--ink);border-bottom:1px solid var(--ln)}
-.trust .in{max-width:1240px;padding:23px 26px}
-.trust div{font-size:.94rem}.trust .i{color:var(--gold)}
-h2{letter-spacing:-.045em;font-size:clamp(2rem,3.7vw,2.85rem)}
-.eb{letter-spacing:.04em;text-transform:uppercase;font-size:.82rem}
-.tiles{gap:20px}
-.tile{min-height:250px;padding:26px;border-radius:20px;isolation:isolate;box-shadow:0 16px 34px rgba(15,35,31,.17)}
-.tile::before{content:"";position:absolute;z-index:-2;inset:0;background-position:center;background-size:cover;transition:transform .55s}
-.tile::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(0deg,rgba(9,24,20,.94),rgba(9,24,20,.12) 76%)}
-.tile:nth-child(1)::before{background-image:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80")}
-.tile:nth-child(2)::before{background-image:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80")}
-.tile:nth-child(3)::before{background-image:url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80")}
-.tile:nth-child(4)::before{background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80")}
-.tile:nth-child(n){background:#17332d}
-.tile:hover::before{transform:scale(1.05)}
-.tile .i{color:#fff;opacity:.72}.tile h3{font-size:1.2rem}.tile b{color:#ead8af}
-.why{border-radius:24px;box-shadow:0 20px 55px rgba(20,40,34,.1)}
-.why .l{background:radial-gradient(400px 260px at 100% 0,rgba(189,148,82,.26),transparent 65%),linear-gradient(145deg,#193a33,#10231f)}
-.hs div,.card,details{border-radius:20px}
-.card{padding:27px;box-shadow:0 12px 32px rgba(20,40,34,.055);transition:transform .22s,box-shadow .22s,border-color .22s}
-.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(20,40,34,.1);border-color:#d4bd91}
-.thumb{height:210px;margin:-10px -10px 22px;border-radius:15px;background-position:center;background-size:cover}
-.thumb::after{background:linear-gradient(0deg,rgba(15,34,29,.18),transparent 65%)}
-.thumb .i{display:none}
-.grid .card:nth-child(1) .thumb{background-image:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85")}
-.grid .card:nth-child(2) .thumb{background-image:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85")}
-.grid .card:nth-child(3) .thumb{background-image:url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85")}
-.grid .card:nth-child(4) .thumb{background-image:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85")}
-.grid .card:nth-child(5) .thumb{background-image:url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85")}
-.grid .card:nth-child(6) .thumb{background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85")}
-.pgh{background:linear-gradient(90deg,rgba(16,35,31,.96),rgba(16,35,31,.75)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80") center 52%/cover no-repeat}
-.pgh .wrap{padding-top:78px;padding-bottom:78px}
-.pgh h1{letter-spacing:-.05em}
-.cta{background:radial-gradient(ellipse at 50% 0,rgba(189,148,82,.25),transparent 56%),linear-gradient(145deg,#193a33,#10231f)}
-.info .btn{margin-top:5px}
-.info a.btn{color:#fff;background:#16804a;box-shadow:0 9px 22px rgba(22,128,74,.24)}
-.info a.btn .i{color:currentColor}
-.info a.btn:hover{color:#fff;background:#10683b;box-shadow:0 12px 26px rgba(22,128,74,.3)}
-.info a.btn:focus-visible{outline-color:#16804a}
-footer .in{max-width:1240px;padding:52px 26px 30px}
-.wa{width:60px;height:60px;box-shadow:0 10px 28px rgba(37,211,102,.34);transition:transform .2s}
-.wa:hover{transform:translateY(-3px) scale(1.04)}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:68px;padding-bottom:140px}.hero::before{width:100%;opacity:.48;background-image:linear-gradient(90deg,rgba(16,35,31,.82),rgba(16,35,31,.34)),linear-gradient(0deg,#10231f,transparent 58%),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80")}.glass{max-width:540px}.wrap{padding:70px 22px}}
-@media(max-width:600px){.bar{padding:10px 17px;min-height:68px}.logo{font-size:1.04rem}.logo small{font-size:.57rem}.hero .wrap{padding:54px 20px 124px}.hero h1{font-size:clamp(2.4rem,11vw,3.35rem)}.hero p.s{font-size:1.02rem}.glass{padding:23px}.hl{gap:12px 17px;font-size:.87rem}.wrap{padding:58px 19px}.tile{min-height:220px}.thumb{height:190px}.why .l,.why .r{padding:34px 26px}.pgh .wrap{padding:58px 20px}.pgh p{font-size:1rem}.cta .wrap{padding:58px 20px}.steps li{grid-template-columns:46px 1fr;gap:16px}.steps li::before{width:46px;height:46px}.steps li:not(:last-child)::after{left:22px;top:46px}.wa{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:54px;height:54px}}
-@media(prefers-reduced-motion:reduce){.tile::before{transition:none}}
-.trust{background:#fff;border-bottom:1px solid #e3e8e2;box-shadow:0 12px 30px rgba(16,35,31,.08)}
-.trust .in{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding-top:20px;padding-bottom:20px}
-.trust .in>div{min-height:76px;padding:14px 16px;gap:13px;border:1px solid #e4e9e3;border-radius:16px;background:#f7f8f5;color:#18342d;font-size:.96rem;font-weight:700;line-height:1.35;box-shadow:0 5px 14px rgba(16,35,31,.045)}
-.trust .in>div>.i{width:42px;height:42px;padding:10px;border-radius:12px;background:#183c32;color:#ead8af;font-size:1.35rem}
-@media(max-width:900px){.trust .in{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;padding:18px 22px}}
-@media(max-width:420px){.trust .in{gap:9px;padding:16px 16px}.trust .in>div{min-height:72px;padding:11px 10px;gap:9px;font-size:.88rem}.trust .in>div>.i{width:36px;height:36px;padding:8px;font-size:1.2rem}}
-</style></head><body>
+<link rel="stylesheet" href="styles.css"></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="hm" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10H3zM9 21v-6h6v6"/></symbol>
 <symbol id="key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/></symbol>
@@ -210,11 +24,10 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <symbol id="villa" viewBox="0 0 24 24"><path d="M2 12l10-8 10 8M5 10v10h14V10M10 20v-5h4v5"/></symbol>
 <symbol id="ck" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
 <symbol id="star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
-<symbol id="wa" viewBox="0 0 24 24"><path d="M3 21l1.6-5A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4-1zM9 8.5c0 3 2.5 6 6 6.5l1.2-1.4-2-1-1 .7a5 5 0 01-2.4-2.4l.7-1-1-2z"/></symbol>
 </defs></svg>
 
 <header><div class="bar">
-<a class="logo" href="#home"><span class="mark"><svg class="i"><use href="#bld"/></svg></span><span>Nathel Realtors<small>PROPERTY ADVISOR &amp; PROVIDER</small></span></a>
+<a class="logo" href="#home"><img class="brand-mark" src="logo-transparent.png" alt=""><span class="logo-copy"><span class="logo-name"><span class="logo-nathel">Nathel</span> <span class="logo-realtors">Realtors</span></span><small>Divine Gift</small></span></a>
 <button class="mb" id="mb" aria-label="Menu" aria-expanded="false">☰</button>
 <nav id="nav" aria-label="Main"><a href="#home">Home</a><a href="#about">About</a><a href="#properties">Properties</a><a href="#services">Services</a><a href="#process">How we work</a><a class="cl" href="#contact">Contact us</a></nav>
 </div></header>
@@ -222,12 +35,14 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <main>
 <section class="page" id="home">
 <div class="hero"><div class="wrap">
-<div><span class="pill"><svg class="i"><use href="#pin"/></svg>Greater Noida West</span>
-<h1>We are your <em>property advisor</em> and provider.</h1>
+<div><h1>We are your <em>property advisor</em> and provider.</h1>
 <p class="s">Give us a chance to explain, take the time you need, and keep your trust. You will get solutions that fit your life and your budget.</p>
 <div class="btns"><a class="btn" href="#contact">Book a free consultation</a><a class="btn o" href="tel:+919319113716"><svg class="i"><use href="#phone"/></svg>9319113716</a></div><div class="hl"><span><svg class="i"><use href="#ck"/></svg>Free consultation</span><span><svg class="i"><use href="#ck"/></svg>Verified properties</span><span><svg class="i"><use href="#ck"/></svg>Paperwork support</span></div></div>
 <div class="glass"><h3>Find your property</h3><p>Tell us what you need. We reply on WhatsApp.</p>
-<label>Property type<select id="ht"><option>Apartment / flat</option><option>Builder floor / villa</option><option>Plot / land</option><option>Shop / office</option><option>Rental</option></select></label>
+<label>Property type<select id="ht"><option>Residential Houses / Apartments</option><option>New Projects</option><option>Office Spaces</option><option>Commercial / Studio (Pre-Leased) / Lock-in</option><option>Industrial Building, PEB and Factories</option><option>Raw Land</option></select></label>
+<label>Category<select id="hc"></select></label>
+<label id="hsw">Specification<select id="hs"></select></label>
+<label>Starting budget<input id="hbud" type="text" readonly aria-readonly="true"></label>
 <label>Your phone number<input id="hp" type="tel" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" aria-describedby="hp-error"></label><small id="hp-error" class="phone-error" aria-live="polite"></small>
 <button class="btn" id="hb" type="button">Get options</button></div>
 </div>
@@ -263,12 +78,14 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <div class="trust"><div class="in">
 <div><svg class="i"><use href="#shield"/></svg>Verified properties</div><div><svg class="i"><use href="#star"/></svg>Honest advice, no pressure</div><div><svg class="i"><use href="#pin"/></svg>Local Greater Noida West experts</div><div><svg class="i"><use href="#doc"/></svg>Paperwork support</div></div></div>
 
-<div class="wrap"><div class="eb">Browse by type</div><h2>What are you looking for?</h2><p class="lead">From a first home to a shop for your business, we help you find the right property.</p>
+<div class="wrap"><h2>What are you looking for?</h2><p class="lead">From a first home to a factory or a plot of land, we help you find the right property.</p>
 <div class="tiles">
-<a class="tile" href="#properties"><svg class="i"><use href="#bld"/></svg><h3>Flats and apartments</h3><p>1 to 4 BHK homes in good societies.</p><b>View details</b></a>
-<a class="tile" href="#properties"><svg class="i"><use href="#villa"/></svg><h3>Floors and villas</h3><p>More space for your family.</p><b>View details</b></a>
-<a class="tile" href="#properties"><svg class="i"><use href="#plot"/></svg><h3>Plots and land</h3><p>Clear papers, good locations.</p><b>View details</b></a>
-<a class="tile" href="#properties"><svg class="i"><use href="#shop"/></svg><h3>Shops and offices</h3><p>Commercial space to buy or lease.</p><b>View details</b></a></div></div>
+<a class="tile" href="#properties?type=res"><img class="tile-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Modern home interior" loading="lazy"><div class="tile-content"><div class="tile-heading"><h3>Houses and apartments</h3><svg class="i" aria-hidden="true"><use href="#bld"/></svg></div><p>Buy or rent. Homes from ₹35 Lakh, rentals from ₹15,000 per month.</p><b>View details</b></div></a>
+<a class="tile" href="#properties?type=new"><img class="tile-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Contemporary residential project" loading="lazy"><div class="tile-content"><div class="tile-heading"><h3>New projects</h3><svg class="i" aria-hidden="true"><use href="#villa"/></svg></div><p>High rise, builder floors and commercial complexes.</p><b>View details</b></div></a>
+<a class="tile" href="#properties?type=land"><img class="tile-image" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Open land at sunset" loading="lazy"><div class="tile-content"><div class="tile-heading"><h3>Raw land</h3><svg class="i" aria-hidden="true"><use href="#plot"/></svg></div><p>Plots, industrial and farmhouse land.</p><b>View details</b></div></a>
+<a class="tile" href="#properties?type=off"><img class="tile-image" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Modern office interior" loading="lazy"><div class="tile-content"><div class="tile-heading"><h3>Office spaces</h3><svg class="i" aria-hidden="true"><use href="#case"/></svg></div><p>Office spaces for growing teams, to buy or rent.</p><b>View details</b></div></a>
+<a class="tile" href="#properties?type=com"><img class="tile-image" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Commercial workspace" loading="lazy"><div class="tile-content"><div class="tile-heading"><h3>Commercial and studios</h3><svg class="i" aria-hidden="true"><use href="#shop"/></svg></div><p>Pre-leased spaces, lock-in options and commercial properties.</p><b>View details</b></div></a>
+<a class="tile" href="#properties?type=ind"><img class="tile-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Industrial warehouse interior" loading="lazy"><div class="tile-content"><div class="tile-heading"><h3>Industrial buildings</h3><svg class="i" aria-hidden="true"><use href="#bank"/></svg></div><p>PEB buildings, factories and industrial spaces.</p><b>View details</b></div></a></div></div>
 <div class="band"><div class="wrap"><div class="why">
 <div class="l"><q>Give us a chance. Take your time. Keep your trust.</q><p>That is our promise. We explain every option clearly and you decide when you are ready. No pressure, no confusion.</p><a class="btn" href="#about">Know more about us</a></div>
 <div class="r">
@@ -276,11 +93,11 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <div class="ck"><svg class="i"><use href="#ck"/></svg><div><b>Properties that fit your budget</b><span>We listen first, then show only what suits you.</span></div></div>
 <div class="ck"><svg class="i"><use href="#ck"/></svg><div><b>Local Greater Noida West knowledge</b><span>Our office is at Techzone-4, right in the area.</span></div></div>
 <div class="ck"><svg class="i"><use href="#ck"/></svg><div><b>Support till handover</b><span>Site visits, negotiation, documents and registry.</span></div></div></div></div></div></div>
-<div class="wrap"><div class="eb">Simple process</div><h2>Your property in 4 easy steps</h2>
+<div class="wrap"><div class="eb simple-process">Simple process</div><h2>Your property in 4 easy steps</h2>
 <div class="hs"><div><h3>Tell us your need</h3><p>Budget, location and type of property.</p></div><div><h3>Get a shortlist</h3><p>Only options that really match you.</p></div><div><h3>Visit and compare</h3><p>We arrange site visits at your time.</p></div><div><h3>Close with confidence</h3><p>Fair price, clean papers, smooth handover.</p></div></div>
 <p style="margin-top:30px"><a class="btn" href="#process">See full process</a></p></div>
-<div class="band"><div class="wrap"><div class="eb">Where we work</div><h2>Rooted in Greater Noida West</h2><p class="lead">Our team works every day in this area, so you get advice from people who know it well.</p>
-<div class="chips"><span><svg class="i"><use href="#pin"/></svg>Techzone-4</span><span><svg class="i"><use href="#pin"/></svg>Greater Noida West</span><span><svg class="i"><use href="#pin"/></svg>Gaur City</span><span><svg class="i"><use href="#pin"/></svg>Noida Extension</span><span><svg class="i"><use href="#pin"/></svg>Greater Noida</span></div></div></div>
+<div class="band"><div class="wrap"><div class="eb where-we-work">Where we work</div><h2>Rooted in Greater Noida West</h2><p class="lead">Our team works every day in this area, so you get advice from people who know it well.</p>
+<div class="chips"><span><svg class="i"><use href="#pin"/></svg>Techzone-4</span><span><svg class="i"><use href="#pin"/></svg>Greater Noida West</span><span><svg class="i"><use href="#pin"/></svg>Gaur City</span><span><svg class="i"><use href="#pin"/></svg>Noida Extension</span><span><svg class="i"><use href="#pin"/></svg>Greater Noida</span><span><svg class="i"><use href="#pin"/></svg>Gaur City 2</span><span><svg class="i"><use href="#pin"/></svg>Sector 1</span><span><svg class="i"><use href="#pin"/></svg>Sector 2</span><span><svg class="i"><use href="#pin"/></svg>Sector 4</span><span><svg class="i"><use href="#pin"/></svg>Sector 16B</span><span><svg class="i"><use href="#pin"/></svg>Sector 16C</span></div></div></div>
 <div class="cta"><div class="wrap"><h2>Ready to find your next property?</h2><p>Share your requirement today. Our advisor will call you back with the best options.</p><div class="btns"><a class="btn" href="#contact">Book a free consultation</a><a class="btn o" href="https://wa.me/919319113716" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>WhatsApp us</a></div>
 <div class="ctc"><span><svg class="i"><use href="#phone"/></svg>9319113716</span><span><svg class="i"><use href="#pin"/></svg>Golden I Tower C, Techzone-4, Greater Noida West</span></div></div></div>
 </section>
@@ -288,24 +105,108 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <section class="page" id="about">
 <div class="pgh"><div class="wrap"><h1>About Nathel Realtors</h1><p>A property advisory and provider team in Greater Noida West.</p></div></div>
 <div class="wrap split">
-<div><div class="eb">Our story</div><h2>Advice you can rely on</h2><p class="lead">We are your property advisor and provider. Our approach is simple: give us a chance to describe the options, take the time you need, and keep your trust. In return, you get solutions that fit your life and budget.</p><p class="lead">Whether you are buying your first home, investing, or looking for a shop or office, we explain every step in plain language.</p></div>
+<div><div class="eb no-eb-line">Our story</div><h2>Advice you can rely on</h2><p class="lead">We are your property advisor and provider. Our approach is simple: give us a chance to describe the options, take the time you need, and keep your trust. In return, you get solutions that fit your life and budget.</p><p class="lead">Whether you are buying your first home, investing, or looking for a shop or office, we explain every step in plain language.</p></div>
 <div class="card info"><h3 style="margin-bottom:22px">Visit our office</h3>
 <p><svg class="i"><use href="#pin"/></svg><span><b>Address</b>Golden I Tower C, Techzone-4, Greater Noida West, Greater Noida 201306</span></p>
 <p><svg class="i"><use href="#phone"/></svg><span><b>Phone</b><a href="tel:+919319113716">9319113716</a></span></p>
 <p style="margin:0"><svg class="i"><use href="#star"/></svg><span><b>Instagram</b><a href="https://www.instagram.com/nathelreators/" target="_blank" rel="noopener">@nathelreators</a></span></p></div></div>
-<div class="band"><div class="wrap"><div class="eb">Our values</div><h2>What we stand for</h2>
+<div class="band"><div class="wrap"><div class="eb no-eb-line">Our values</div><h2>What we stand for</h2>
 <div class="grid"><div class="card"><div class="ic"><svg class="i"><use href="#shield"/></svg></div><h3>Honesty</h3><p>We tell you the good and the bad about a property.</p></div><div class="card"><div class="ic"><svg class="i"><use href="#key"/></svg></div><h3>Patience</h3><p>Take your time. We never rush you into a decision.</p></div><div class="card"><div class="ic"><svg class="i"><use href="#target"/></svg></div><h3>Results</h3><p>Our goal is a deal you are happy with long after you move in.</p></div></div></div></div>
 </section>
 
 <section class="page" id="properties">
-<div class="pgh"><div class="wrap"><h1>Properties</h1><p>The kinds of property we help you find. Call us for current availability and prices.</p></div></div>
-<div class="wrap"><div class="grid" style="margin-top:0">
-<div class="card"><div class="thumb"><svg class="i"><use href="#bld"/></svg></div><h3>Apartments and flats</h3><p>1, 2, 3 and 4 BHK homes in Greater Noida West societies.</p><div class="tags"><span>Buy</span><span>Rent</span><span>Ready to move</span></div></div>
-<div class="card"><div class="thumb"><svg class="i"><use href="#villa"/></svg></div><h3>Builder floors and villas</h3><p>Independent floors and villas for families who want more space.</p><div class="tags"><span>Buy</span><span>Resale</span></div></div>
-<div class="card"><div class="thumb"><svg class="i"><use href="#plot"/></svg></div><h3>Plots and land</h3><p>Residential and investment plots with clear documents.</p><div class="tags"><span>Investment</span><span>Verified papers</span></div></div>
-<div class="card"><div class="thumb"><svg class="i"><use href="#shop"/></svg></div><h3>Shops and showrooms</h3><p>Retail spaces in busy market and society areas.</p><div class="tags"><span>Buy</span><span>Lease</span></div></div>
-<div class="card"><div class="thumb"><svg class="i"><use href="#case"/></svg></div><h3>Offices</h3><p>Office space for start-ups and growing teams, close to Techzone.</p><div class="tags"><span>Rent</span><span>Lease</span></div></div>
-<div class="card"><div class="thumb"><svg class="i"><use href="#key"/></svg></div><h3>Rentals</h3><p>Furnished and unfurnished homes for families and professionals.</p><div class="tags"><span>Monthly rent</span><span>Quick move-in</span></div></div></div></div>
+<div class="pgh"><div class="wrap"><h1>Properties</h1><p>Choose a property type to see categories and starting budgets. Call us for current availability and exact prices.</p></div></div>
+<div class="wrap">
+
+<div class="pf" role="group" aria-label="Filter by property type">
+<button type="button" data-k="all" aria-pressed="true">All</button>
+<button type="button" data-k="res" aria-pressed="false">Houses / Apartments</button>
+<button type="button" data-k="new" aria-pressed="false">New Projects</button>
+<button type="button" data-k="off" aria-pressed="false">Offices</button>
+<button type="button" data-k="com" aria-pressed="false">Commercial / Studio</button>
+<button type="button" data-k="ind" aria-pressed="false">Industrial</button>
+<button type="button" data-k="land" aria-pressed="false">Raw Land</button>
+</div>
+
+<div class="pt">
+
+<!-- 1 Residential -->
+<div class="pc" data-k="res">
+<div class="pch"><div class="ic"><svg class="i"><use href="#hm"/></svg></div><div class="t"><h3>Residential Houses / Apartments</h3><p>Homes in renowned societies, to buy or to rent.</p></div><button class="btn enq" type="button" data-q="Residential Houses / Apartments">Enquire</button></div>
+<div class="opts">
+<div class="opt"><div class="oh"><b>Buy / Sale</b><span class="tag buy">Buy</span></div>
+<div><div class="lb">Specification</div><div class="sp2"><span>Renowned Properties</span></div></div>
+<div class="price"><small>Starting from</small><b>₹35 Lakh</b><span>onwards</span></div></div>
+<div class="opt"><div class="oh"><b>Renting</b><span class="tag rent">Rent</span></div>
+<div><div class="lb">Specification</div><div class="sp2"><span>Renowned Properties</span></div></div>
+<div class="price"><small>Starting from</small><b>₹15,000</b><span>per month onwards</span></div></div>
+</div></div>
+
+<!-- 2 New Projects -->
+<div class="pc" data-k="new">
+<div class="pch"><div class="ic"><svg class="i"><use href="#bld"/></svg></div><div class="t"><h3>New Projects</h3><p>Pick a project type. Every stage is available in each.</p></div><button class="btn enq" type="button" data-q="New Projects">Enquire</button></div>
+<div class="opts">
+<div class="opt"><div class="oh"><b>High Rise Apartments</b></div>
+<div><div class="lb">Stage</div><div class="sp2"><span>Pre-Launch</span><span>Under Construction</span><span>Near Possession</span><span>Ready To Move</span></div></div>
+<div class="price"><small>Starting from</small><b>₹1.25 Cr</b><span>onwards</span></div></div>
+<div class="opt"><div class="oh"><b>Low Rise Builder Floors</b></div>
+<div><div class="lb">Stage</div><div class="sp2"><span>Pre-Launch</span><span>Under Construction</span><span>Near Possession</span><span>Ready To Move</span></div></div>
+<div class="price"><small>Starting from</small><b>₹2 Cr</b><span>onwards</span></div></div>
+<div class="opt"><div class="oh"><b>Commercial Complex</b></div>
+<div><div class="lb">Stage</div><div class="sp2"><span>Pre-Launch</span><span>Under Construction</span><span>Near Possession</span><span>Ready To Move</span></div></div>
+<div class="price"><small>Starting from</small><b>₹60 Lakh</b><span>onwards</span></div></div>
+</div></div>
+
+<!-- 3 Office Spaces -->
+<div class="pc" data-k="off">
+<div class="pch"><div class="ic"><svg class="i"><use href="#case"/></svg></div><div class="t"><h3>Office Spaces</h3><p>Office space for start-ups and growing teams.</p></div><button class="btn enq" type="button" data-q="Office Spaces">Enquire</button></div>
+<div class="opts">
+<div class="opt"><div class="oh"><b>Buy / Sale</b><span class="tag buy">Buy</span></div>
+<div class="price"><small>Starting from</small><b>₹25 Lakh</b><span>onwards</span></div></div>
+<div class="opt"><div class="oh"><b>Renting</b><span class="tag rent">Rent</span></div>
+<div class="price"><small>Starting from</small><b>₹20,000</b><span>per month onwards</span></div></div>
+</div></div>
+
+<!-- 4 Commercial -->
+<div class="pc" data-k="com">
+<div class="pch"><div class="ic"><svg class="i"><use href="#shop"/></svg></div><div class="t"><h3>Commercial / Studio (Pre-Leased) / Lock-in</h3><p>Income-ready commercial spaces, new and renowned.</p></div><button class="btn enq" type="button" data-q="Commercial / Studio (Pre-Leased) / Lock-in">Enquire</button></div>
+<div class="opts">
+<div class="opt"><div class="oh"><b>Buy / Sale</b><span class="tag buy">Buy</span></div>
+<div><div class="lb">Specification</div><div class="sp2"><span>New Properties</span><span>Renowned Properties</span></div></div>
+<div class="price"><small>Starting from</small><b>₹60 Lakh</b><span>onwards (both specifications)</span></div></div>
+<div class="opt"><div class="oh"><b>Renting</b><span class="tag rent">Rent</span></div>
+<div><div class="lb">Specification</div><div class="sp2"><span>New Properties</span><span>Renowned Properties</span></div></div>
+<div class="price"><small>Starting from</small><b>₹25,000</b><span>per month onwards (both specifications)</span></div></div>
+</div></div>
+
+<!-- 5 Industrial -->
+<div class="pc" data-k="ind">
+<div class="pch"><div class="ic"><svg class="i"><use href="#bank"/></svg></div><div class="t"><h3>Industrial Building, PEB and Factories</h3><p>Priced per square yard.</p></div><button class="btn enq" type="button" data-q="Industrial Building, PEB and Factories">Enquire</button></div>
+<div class="opts">
+<div class="opt"><div class="oh"><b>Buy / Sale</b><span class="tag buy">Buy</span></div>
+<div class="price"><small>Price</small><b>₹25,000</b><span>per sq yard</span></div></div>
+<div class="opt"><div class="oh"><b>Renting</b><span class="tag rent">Rent</span></div>
+<div class="price"><small>Starting from</small><b>₹150</b><span>per sq yard onwards</span></div></div>
+</div></div>
+
+<!-- 6 Raw Land -->
+<div class="pc" data-k="land">
+<div class="pch"><div class="ic"><svg class="i"><use href="#plot"/></svg></div><div class="t"><h3>Raw Land</h3><p>Plots, industrial land and farmhouse land. All prices per square yard.</p></div><button class="btn enq" type="button" data-q="Raw Land">Enquire</button></div>
+<div class="opts">
+<div class="opt"><div class="oh"><b>Plots</b><span class="tag buy">Buy / Sale</span></div>
+<div class="rw">
+<div><span class="nm">Authority</span><span class="pv"><b>₹50,000</b><small>per sq yard onwards</small></span></div>
+<div><span class="nm">6% Under Authority</span><span class="pv"><b>₹35,000</b><small>per sq yard onwards</small></span></div></div></div>
+<div class="opt"><div class="oh"><b>Industrial Land</b></div>
+<div class="rw">
+<div><span class="nm">Government Approved</span><span class="pv"><b>₹1 Lakh</b><small>per sq yard</small></span></div>
+<div><span class="nm">Freehold</span><span class="pv"><b>₹90,000</b><small>per sq yard onwards</small></span></div></div></div>
+<div class="opt"><div class="oh"><b>Farmhouse Land</b></div>
+<div class="rw">
+<div><span class="nm">Freehold</span><span class="pv"><b>₹60,000</b><small>per sq yard onwards</small></span></div></div></div>
+</div></div>
+
+</div></div>
 <div class="cta"><div class="wrap"><h2>Did not find what you want?</h2><p>Tell us your budget and location. We will search for you.</p><a class="btn" href="#contact">Share your requirement</a></div></div>
 </section>
 
@@ -318,7 +219,7 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <div class="card"><div class="ic"><svg class="i"><use href="#target"/></svg></div><h3>Investment guidance</h3><p>Understand growth areas and rental returns before you invest.</p></div>
 <div class="card"><div class="ic"><svg class="i"><use href="#doc"/></svg></div><h3>Documentation help</h3><p>Help with paperwork, registry and verification of documents.</p></div>
 <div class="card"><div class="ic"><svg class="i"><use href="#bank"/></svg></div><h3>Home loan support</h3><p>We guide you to the right bank and help with the loan process.</p></div></div></div>
-<div class="band"><div class="wrap" style="max-width:820px"><div class="eb">FAQ</div><h2>Common questions</h2><div style="margin-top:28px">
+<div class="band"><div class="wrap" style="max-width:820px"><div class="eb no-eb-line">FAQ</div><h2>Common questions</h2><div style="margin-top:28px">
 <details><summary>Do you charge for consultation?</summary><p>Please call us on 9319113716 and we will explain our terms clearly before you decide anything.</p></details>
 <details><summary>Can you help with home loans?</summary><p>Yes. We guide you on the loan process and help you with the documents banks ask for.</p></details>
 <details><summary>Do you help with both buying and renting?</summary><p>Yes. We handle buying, selling, renting and leasing for homes, plots and commercial spaces.</p></details>
@@ -340,43 +241,38 @@ footer .in{max-width:1240px;padding:52px 26px 30px}
 <div class="pgh"><div class="wrap"><h1>Contact us</h1><p>Send your requirement. We will get back to you soon.</p></div></div>
 <div class="wrap split" style="align-items:start">
 <div class="card info"><h3 style="margin-bottom:22px">Reach us directly</h3>
-<p><svg class="i"><use href="#phone"/></svg><span><b>Phone and WhatsApp</b><a href="tel:+919319113716">9319113716</a></span></p>
+<p><svg class="i"><use href="#phone"/></svg><span><b>Phone</b><a href="tel:+919319113716">9319113716</a></span></p>
+<p><svg class="i"><use href="#doc"/></svg><span><b>Email</b><a href="mailto:info@nathelrealtors.com">info@nathelrealtors.com</a></span></p>
 <p><svg class="i"><use href="#pin"/></svg><span><b>Address</b>Golden I Tower C, Techzone-4, Greater Noida West, Greater Noida 201306</span></p>
-<p><svg class="i"><use href="#star"/></svg><span><b>Instagram</b><a href="https://www.instagram.com/nathelreators/" target="_blank" rel="noopener">@nathelreators</a></span></p>
-<a class="btn" href="https://wa.me/919319113716" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Chat on WhatsApp</a></div>
-<div class="card"><h3 style="margin-bottom:20px">Send your requirement</h3><div class="fm">
-<label>Your name<input id="n" autocomplete="name"></label>
-<label>Phone number<input id="p" type="tel" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" aria-describedby="p-error"></label><small id="p-error" class="phone-error" aria-live="polite"></small>
-<label>I am looking for<select id="t"><option>Apartment / flat</option><option>Builder floor / villa</option><option>Plot / land</option><option>Shop / office</option><option>Rental</option></select></label>
-<label>Budget and location<textarea id="m" rows="3"></textarea></label>
-<button class="btn" id="s" type="button" style="justify-content:center">Send on WhatsApp</button>
-<small id="e" style="color:var(--mut)">This opens WhatsApp with your message ready to send.</small></div></div></div>
+<div class="social-links" aria-label="Social media">
+<a href="https://www.facebook.com/p/Nathel-Realtors-Property-Le-Lo-61594973677919/" target="_blank" rel="noopener" aria-label="Open Nathel Realtors on Facebook"><img src="facebook-icon.png" alt=""></a>
+<a href="https://www.instagram.com/nathelreators/" target="_blank" rel="noopener" aria-label="Open Nathel Realtors on Instagram"><img src="insta-icon.png" alt=""></a>
+<a href="https://www.youtube.com/@NATHELREALTORS-RAJESHKUMAR" target="_blank" rel="noopener" aria-label="Open Nathel Realtors on YouTube"><img src="yt-icon.png" alt=""></a>
+</div>
+<a class="btn" href="mailto:info@nathelrealtors.com"><svg class="i"><use href="#doc"/></svg>Email us</a></div>
+<div class="card"><h3 style="margin-bottom:20px">Book a free consultation</h3><form class="fm" id="consultation-form" aria-label="Book a free consultation">
+<label>Your name<input id="n" name="name" autocomplete="name" required></label>
+<label>Phone number<input id="p" name="phone" type="tel" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" aria-describedby="p-error" required></label><small id="p-error" class="phone-error" aria-live="polite"></small>
+<label>I am looking for<select id="t" name="property_type" required><option>Residential Houses / Apartments</option><option>New Projects</option><option>Office Spaces</option><option>Commercial / Studio (Pre-Leased) / Lock-in</option><option>Industrial Building, PEB and Factories</option><option>Raw Land</option></select></label>
+<label>Category<select id="c" name="category" required></select></label>
+<label id="sw">Specification<select id="sp" name="specification"></select></label>
+<label>Starting budget<input id="bud" type="text" readonly aria-readonly="true"></label>
+<label>Your budget and location<textarea id="m" name="budget_and_location" rows="3" required></textarea></label>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+<button class="btn" id="s" type="submit" style="justify-content:center">Book consultation</button>
+<small id="e" role="status" aria-live="polite" style="color:var(--mut)">Your request will be emailed to Nathel Realtors, and WhatsApp will open with your details ready to send. Tap Send in WhatsApp to share your request.</small></form></div></div></div>
 </section>
 </main>
 
 <footer><div class="in">
-<div><a class="logo" href="#home" style="color:#fff;margin-bottom:14px"><span class="mark"><svg class="i"><use href="#bld"/></svg></span><span>Nathel Realtors</span></a><p style="margin:0;max-width:36ch">We are your property advisor and provider. Give us a chance, take the time you need, and keep your trust.</p></div>
+<div><a class="logo" href="#home" style="color:#fff;margin-bottom:14px"><img class="brand-mark" src="logo-transparent.png" alt=""><span class="logo-copy"><span class="logo-name"><span class="logo-nathel">Nathel</span> <span class="logo-realtors">Realtors</span></span><small>Divine Gift</small></span></a><p style="margin:0;max-width:36ch">We are your property advisor and provider. Give us a chance, take the time you need, and keep your trust.</p></div>
 <div><h4>Pages</h4><a href="#about">About</a><a href="#properties">Properties</a><a href="#services">Services</a><a href="#process">How we work</a><a href="#contact">Contact</a></div>
-<div><h4>Get in touch</h4><a href="tel:+919319113716">9319113716</a><a href="https://www.instagram.com/nathelreators/" target="_blank" rel="noopener">Instagram</a><span>Golden I Tower C, Techzone-4, Greater Noida West 201306</span></div></div>
+<div><h4>Get in touch</h4><a href="tel:+919319113716">9319113716</a><div class="social-links footer-social" aria-label="Social media">
+<a href="https://www.facebook.com/p/Nathel-Realtors-Property-Le-Lo-61594973677919/" target="_blank" rel="noopener" aria-label="Open Nathel Realtors on Facebook"><img src="facebook-icon.png" alt=""></a>
+<a href="https://www.instagram.com/nathelreators/" target="_blank" rel="noopener" aria-label="Open Nathel Realtors on Instagram"><img src="insta-icon.png" alt=""></a>
+<a href="https://www.youtube.com/@NATHELREALTORS-RAJESHKUMAR" target="_blank" rel="noopener" aria-label="Open Nathel Realtors on YouTube"><img src="yt-icon.png" alt=""></a>
+</div><span>Golden I Tower C, Techzone-4, Greater Noida West 201306</span></div></div>
 <div class="cp">© 2026 Nathel Realtors. All rights reserved.</div></footer>
-<a class="wa" href="https://wa.me/919319113716" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="i"><use href="#wa"/></svg></a>
+<a class="wa" href="https://wa.me/919319113716" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><img src="whatsapp-icon.png" alt=""></a>
 
-<script>
-var pages=["home","about","properties","services","process","contact"],nav=document.getElementById("nav"),mb=document.getElementById("mb");
-function route(){var h=(location.hash||"#home").slice(1);if(pages.indexOf(h)<0)h="home";
-pages.forEach(function(p){document.getElementById(p).classList.toggle("on",p===h)});
-document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h&&!a.classList.contains("cl"))});
-nav.classList.remove("open");mb.setAttribute("aria-expanded","false");window.scrollTo(0,0)}
-window.addEventListener("hashchange",route);route();
-mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)});
-function wa(m){window.open("https://wa.me/919319113716?text="+encodeURIComponent(m),"_blank")}
-function limitPhone(input){input.value=input.value.replace(/\D/g,"").slice(0,10)}
-document.querySelectorAll('#hp,#p').forEach(function(input){input.addEventListener("input",function(){limitPhone(input);var error=document.getElementById(input.id+"-error");error.textContent="";input.setCustomValidity("")})});
-document.getElementById("hb").addEventListener("click",function(){var phone=document.getElementById("hp"),error=document.getElementById("hp-error");limitPhone(phone);if(!/^\d{10}$/.test(phone.value)){error.textContent="Please enter exactly 10 digits.";phone.setCustomValidity("Please enter exactly 10 digits.");phone.reportValidity();return}error.textContent="";phone.setCustomValidity("");wa("Hello Nathel Realtors, I am looking for: "+document.getElementById("ht").value+". My number: "+phone.value)});
-document.getElementById("s").addEventListener("click",function(){
-var n=document.getElementById("n").value.trim(),p=document.getElementById("p"),e=document.getElementById("e"),phoneError=document.getElementById("p-error");limitPhone(p);
-if(!n||!p.value){e.textContent="Please enter your name and phone number.";e.style.color="var(--gold)";return}
-if(!/^\d{10}$/.test(p.value)){phoneError.textContent="Please enter exactly 10 digits.";p.setCustomValidity("Please enter exactly 10 digits.");p.reportValidity();return}
-phoneError.textContent="";p.setCustomValidity("");
-wa("Hello Nathel Realtors, I am "+n+" ("+p.value+"). I am looking for: "+document.getElementById("t").value+". Details: "+document.getElementById("m").value)});
-</script></body></html>
+<script src="script.js"></script></body></html>
