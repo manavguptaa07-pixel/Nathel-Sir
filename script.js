@@ -8,6 +8,29 @@ window.addEventListener("hashchange",route);route();
 mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)});
 function wa(m){window.open("https://wa.me/919319113716?text="+encodeURIComponent(m),"_blank")}
 function limitPhone(input){input.value=input.value.replace(/\D/g,"").slice(0,10)}
+var LOCATIONS=[
+ "Greater Noida — 201310",
+ "Greater Noida West — 201318",
+ "Noida — 201301",
+ "Noida — 201310",
+ "Noida Expressway — 201303",
+ "Indirapuram, Ghaziabad — 201014",
+ "Vasundhara, Ghaziabad — 201012",
+ "Vaishali, Ghaziabad — 201019",
+ "Siddharth Vihar, Ghaziabad — 201009",
+ "Aditya World City, NH 24 Ghaziabad — 201002",
+ "Wave City, NH 24 Ghaziabad — 201010",
+ "Sikandrabad — 203205",
+ "Dadri — 203207",
+ "Surajpur — 201306"
+];
+function fillLocations(select){
+ select.innerHTML="";
+ select.appendChild(new Option("Choose a location",""));
+ LOCATIONS.forEach(function(location){select.appendChild(new Option(location,location))});
+}
+fillLocations(document.getElementById("hloc"));
+fillLocations(document.getElementById("property-enquiry-location"));
 
 /* Property data: type -> category -> specification -> starting budget. Empty key "" means no specification. */
 var DATA={
@@ -59,10 +82,28 @@ function setPropertyFilter(k){
  document.querySelectorAll(".pc").forEach(function(c){c.style.display=(k==="all"||c.getAttribute("data-k")===k)?"":"none"});
 }
 pfb.forEach(function(b){b.addEventListener("click",function(){setPropertyFilter(b.getAttribute("data-k"))})});
-document.querySelectorAll(".pc .enq").forEach(function(b){b.addEventListener("click",function(){wa("Hello Nathel Realtors, I want details about: "+b.getAttribute("data-q"))})});
+
+var propertyEnquiryDialog=document.getElementById("property-enquiry-dialog"),propertyEnquiryForm=document.getElementById("property-enquiry-form"),propertyEnquiryName=document.getElementById("property-enquiry-name"),propertyEnquiryLocation=document.getElementById("property-enquiry-location"),selectedEnquiryProperty="";
+document.querySelectorAll(".pc .enq").forEach(function(button){
+ button.addEventListener("click",function(){
+  selectedEnquiryProperty=button.getAttribute("data-q");
+  propertyEnquiryName.textContent=selectedEnquiryProperty;
+  propertyEnquiryForm.reset();
+  propertyEnquiryDialog.showModal();
+  propertyEnquiryLocation.focus();
+ });
+});
+document.getElementById("property-enquiry-close").addEventListener("click",function(){propertyEnquiryDialog.close()});
+propertyEnquiryForm.addEventListener("submit",function(event){
+ event.preventDefault();
+ if(!propertyEnquiryForm.reportValidity())return;
+ wa("Hello Nathel Realtors, I want details about: "+selectedEnquiryProperty+". Preferred location: "+propertyEnquiryLocation.value);
+ propertyEnquiryDialog.close();
+ propertyEnquiryForm.reset();
+});
 
 document.querySelectorAll('#hp,#p').forEach(function(input){input.addEventListener("input",function(){limitPhone(input);var error=document.getElementById(input.id+"-error");error.textContent="";input.setCustomValidity("")})});
-document.getElementById("hb").addEventListener("click",function(){var phone=document.getElementById("hp"),error=document.getElementById("hp-error");limitPhone(phone);if(!/^\d{10}$/.test(phone.value)){error.textContent="Please enter exactly 10 digits.";phone.setCustomValidity("Please enter exactly 10 digits.");phone.reportValidity();return}error.textContent="";phone.setCustomValidity("");wa("Hello Nathel Realtors, I am looking for: "+propText({t:"ht",c:"hc",sw:"hsw",s:"hs",b:"hbud"})+". My number: "+phone.value)});
+document.getElementById("hb").addEventListener("click",function(){var phone=document.getElementById("hp"),error=document.getElementById("hp-error"),location=document.getElementById("hloc");if(!location.reportValidity())return;limitPhone(phone);if(!/^\d{10}$/.test(phone.value)){error.textContent="Please enter exactly 10 digits.";phone.setCustomValidity("Please enter exactly 10 digits.");phone.reportValidity();return}error.textContent="";phone.setCustomValidity("");wa("Hello Nathel Realtors, I am looking for: "+propText({t:"ht",c:"hc",sw:"hsw",s:"hs",b:"hbud"})+". Preferred location: "+location.value+". My number: "+phone.value)});
 var consultationForm=document.getElementById("consultation-form");
 consultationForm.addEventListener("submit",function(event){
 event.preventDefault();
