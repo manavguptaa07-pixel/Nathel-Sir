@@ -43,6 +43,7 @@
 <label>Category<select id="hc"></select></label>
 <label id="hsw">Specification<select id="hs"></select></label>
 <label>Starting budget<input id="hbud" type="text" readonly aria-readonly="true"></label>
+<label>Preferred location<select id="hloc" name="location" required></select></label>
 <label>Your phone number<input id="hp" type="tel" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" aria-describedby="hp-error"></label><small id="hp-error" class="phone-error" aria-live="polite"></small>
 <button class="btn" id="hb" type="button">Get options</button></div>
 </div>
@@ -261,8 +262,19 @@
 <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
 <button class="btn" id="s" type="submit" style="justify-content:center">Book consultation</button>
 <small id="e" role="status" aria-live="polite" style="color:var(--mut)">Your request will be emailed to Nathel Realtors, and WhatsApp will open with your details ready to send. Tap Send in WhatsApp to share your request.</small></form></div></div></div>
+
 </section>
 </main>
+
+<dialog class="enquiry-dialog" id="property-enquiry-dialog" aria-labelledby="property-enquiry-title">
+<form class="fm" id="property-enquiry-form">
+<button class="dialog-close" id="property-enquiry-close" type="button" aria-label="Close">×</button>
+<h2 id="property-enquiry-title">Property enquiry</h2>
+<p id="property-enquiry-name"></p>
+<label>Choose your preferred location<select id="property-enquiry-location" name="location" required></select></label>
+<button class="btn" type="submit">Continue to WhatsApp</button>
+</form>
+</dialog>
 
 <footer><div class="in">
 <div><a class="logo" href="#home" style="color:#fff;margin-bottom:14px"><img class="brand-mark" src="logo-transparent.png" alt=""><span class="logo-copy"><span class="logo-name"><span class="logo-nathel">Nathel</span> <span class="logo-realtors">Realtors</span></span><small>Divine Gift</small></span></a><p style="margin:0;max-width:36ch">We are your property advisor and provider. Give us a chance, take the time you need, and keep your trust.</p></div>
